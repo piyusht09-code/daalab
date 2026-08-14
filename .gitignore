@@ -1,1 +1,7 @@
-prog1da.exe
+*.exe
+*.out
+*.o
+*.obj
+*.pdb
+*.ilk
+.vscode/

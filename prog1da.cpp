@@ -1,6 +1,8 @@
 #include <iostream>
+#include <chrono>
 
 using namespace std;
+using namespace chrono;
 
 void bSort(int a[], int n) {
     for (int i = 0; i < n - 1; i++)
@@ -52,11 +54,16 @@ void mSort(int a[], int l, int r) {
 }
 
 #define TEST(name, func) \
-    for (int i = 0; i < n; i++) a[i] = o[i]; \
-    func; \
-    cout << name; \
-    for (int i = 0; i < n; i++) cout << a[i] << " "; \
-    cout << "\n";
+    { \
+        for (int i = 0; i < n; i++) a[i] = o[i]; \
+        auto start = high_resolution_clock::now(); \
+        func; \
+        auto stop = high_resolution_clock::now(); \
+        duration<double, milli> tc = stop - start; \
+        cout << name; \
+        for (int i = 0; i < n; i++) cout << a[i] << " "; \
+        cout << " | TC: " << tc.count() << " ms\n"; \
+    }
 
 int main() {
     int o[] = {64, 25, 12, 22, 11, 90, 8, 45};
