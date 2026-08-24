@@ -37,7 +37,7 @@ int binarySearch(const vector<int>& arr, int target) {
 int main() {
     int N = 100000000;
     cout << "Generating array of " << N << " elements...\n";
-    
+    cout <<"Made by Piyush Tiwari(5I123)\n";
     vector<int> arr(N);
     for (int i = 0; i < N; i++) {
         arr[i] = i + 1;
