@@ -36,7 +36,7 @@ void activitySelection(vector<Activity>& act, bool silent = true) {
 
 int main() {
     vector<Activity> demo = {{1, 1, 2}, {2, 3, 4}, {3, 0, 6}, {4, 5, 7}, {5, 8, 9}, {6, 5, 9}};
-    cout << "--- Activity Selection Output ---\n";
+    cout << "Made by Piyush Tiwari(5I123)\n--- Activity Selection Output ---\n";
     activitySelection(demo, false);
 
     cout << "\n--- Execution Time Benchmarks (10,000 activities) ---\n";
